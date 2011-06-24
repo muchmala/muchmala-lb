@@ -1,0 +1,22 @@
+{ "name" : "muchmala-lb"
+, "version" : "0.0.1"
+, "description" : "Load balancer server for muchmala"
+, "contributors" :
+ [ "Serge Borbit <serge.borbit@gmail.com>"
+ , "Taras Kunch <taras.kunch@gmail.com>"
+ , "George Miroshnykov <george.miroshnykov@gmail.com>"
+ ]
+, "bin" : { "muchmala-lb" : "./bin/muchmala-lb.js"
+ }
+, "repositories" :
+ { "type" : "git"
+ , "url" : "https://github.com/muchmala/muchmala-lb.git"
+ }
+, "dependencies" :
+ { "http-proxy" : "~0"
+ }
+, "engines" :
+ { "node" : "~0.4"
+ , "npm" : "~1"
+ }
+}
