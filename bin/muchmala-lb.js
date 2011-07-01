@@ -4,11 +4,10 @@ var LoadBalancer = require('../lib/load-balancer');
 var host = process.env.MUCHMALA_LB_HOST || '0.0.0.0';
 var port = process.env.MUCHMALA_LB_PORT || 80;
 
-console.log(process.env.MUCHMALA_LB_CONFIG);
-
 if (!process.env.MUCHMALA_LB_CONFIG) {
-	console.error('Environment variable MUCHMALA_LB_CONFIG is not defined.');
-	process.exit(1);
+	console.error('Environment variable MUCHMALA_LB_CONFIG is not defined, falling back to default config.');
+	process.env.MUCHMALA_LB_CONFIG = '{"muchmala.dev":[{"host":"127.0.0.1","port":8000}],"static.muchmala.dev":[{"host":"127.0.0.1","port":8080}],"io.muchmala.dev":[{"host":"127.0.0.1","port":8090}]}';
+	//process.exit(1);
 }
 
 var config = null;
