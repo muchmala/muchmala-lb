@@ -14,9 +14,11 @@
  }
 , "dependencies" :
  { "http-proxy" : "~0"
+ , "cluster" : "~0"
  }
 , "engines" :
  { "node" : "~0.4"
  , "npm" : "~1"
  }
+, "private" : true
 }
